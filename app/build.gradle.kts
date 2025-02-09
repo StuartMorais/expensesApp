@@ -1,9 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp") version "1.9.0-1.0.11"
-//    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp") version "2.1.0-1.0.29"
     id("com.google.dagger.hilt.android") version "2.41" apply false
+    id("kotlin-kapt")
 }
 
 android {
@@ -31,11 +31,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
@@ -50,6 +50,9 @@ dependencies {
 
     implementation(libs.hilt.android.v248)
     ksp(libs.hilt.compiler)
+
+    implementation(libs.hilt.android.v241)
+    kapt(libs.hilt.android.compiler)
 
     implementation(libs.hilt.android.v248)
     ksp(libs.hilt.compiler)

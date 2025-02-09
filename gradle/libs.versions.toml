@@ -1,13 +1,15 @@
 [versions]
 activityComposeVersion = "1.7.2"
 agp = "8.8.0"
+daggerCompiler = "2.51.1"
 googleHiltAndroid = "2.48"
+googleHiltAndroidVersion = "2.41"
 hiltAndroid = "2.44"
 hiltAndroidVersion = "2.38.1"
 hiltCompiler = "2.38.1"
 hiltNavigationCompose = "1.2.0"
 hiltNavigationComposeVersion = "1.1.0"
-kotlin = "2.0.0"
+kotlin = "2.1.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -34,8 +36,11 @@ androidx-material3-v110 = { module = "androidx.compose.material3:material3", ver
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerCompiler" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "googleHiltAndroidVersion" }
 hilt-android-v2381 = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidVersion" }
+hilt-android-v241 = { module = "com.google.dagger:hilt-android", version.ref = "googleHiltAndroidVersion" }
 hilt-android-v248 = { module = "com.google.dagger:hilt-android", version.ref = "googleHiltAndroid" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
 hilt-compiler-v2381 = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
@@ -58,8 +63,9 @@ testng = { group = "org.testng", name = "testng", version.ref = "testng" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 
 [plugins]
-ksp = { id = "com.google.devtools.ksp", version = "1.9.0-1.0.11" }
+ksp = { id = "com.google.devtools.ksp", version = "2.1.0-1.0.29" }
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+#kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.1.0" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
